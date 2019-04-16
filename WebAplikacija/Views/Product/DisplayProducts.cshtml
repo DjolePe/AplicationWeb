@@ -1,0 +1,32 @@
+﻿@model List<Product>
+@{
+    ViewBag.Title = "Display Products";
+}
+
+<h2>Display Products</h2>
+
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Product Category</th>
+        <th> Product Manufacturer</th>
+        <th>Product Suplier</th>
+        <th>Product Price</th>
+    </tr>
+        @foreach (var item in Model)
+        {
+         <tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Category</td>
+            <td>@item.Manufacturer</td>
+            <td>@item.Suplier</td>
+            <td>@item.Price</td>
+             <td>@Html.ActionLink("Edit","Editproducts","Product",new { productID = item.ID },new { })</td>
+         </tr>
+        }
+
+</table>

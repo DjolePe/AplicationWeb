@@ -1,0 +1,19 @@
+﻿@model WebAplikacija.Models.ProductModel 
+@{
+    ViewBag.Title = "Add Product";
+}
+
+<h2>Add Product</h2>
+
+<form action="AddProduct/Product" method="post">
+
+    Product Name: @Html.TextBoxFor(model => model.Name)
+    Product Description: @Html.TextBoxFor(model => model.Description)
+    Product Category: @Html.TextBoxFor(model => model.Category)
+    Product Manufacturer: @Html.TextBoxFor(model => model.Manufacturer)
+    Product Suplier: @Html.TextBoxFor(model => model.Suplier)
+    Product Price: @Html.TextBoxFor(model => model.Price)
+
+    <input type="submit" value="Add Product"/>
+
+</form>

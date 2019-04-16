@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ImportProduct";
+}
+
+<h2>Import Product</h2>
+
+@using (Html.BeginForm("Import", "Product", FormMethod.Post, new {
+
+    enctype = "multipart/form-data"
+}))
+{
+
+    <div>
+        @ViewBag.Error
+        @ViewBag.Success
+        <br/>
+        JSON File <input type="file" name="jsonFile"/>
+        <br/>
+        <input type="submit" value="Import"/>
+    </div>
+
+}
+

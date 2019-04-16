@@ -1,0 +1,21 @@
+﻿@model Product
+@{
+    ViewBag.Title = "EditProducts";
+}
+
+<h2>Edit Products</h2>
+
+<form action="EditProducts/Product" method="post">
+
+
+    Product Name: @Html.TextBoxFor(model => model.Name)
+    Product Description: @Html.TextBoxFor(model => model.Description)
+    Product Category: @Html.TextBoxFor(model => model.Category)
+    Product Manufacturer: @Html.TextBoxFor(model => model.Manufacturer)
+    Product Suplier: @Html.TextBoxFor(model => model.Suplier)
+    Product Price: @Html.TextBoxFor(model => model.Price)
+    @Html.HiddenFor(model => model.ID)
+
+    <input type="submit" value="Update Product" />
+
+</form>
